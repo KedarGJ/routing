@@ -1,0 +1,30 @@
+<!-- <p>users works!</p>
+
+
+<button 
+routerLink="/products"
+class="btn btn-primary btn-sm">Go to products</button> -->
+
+
+<div class="row">
+    <div class="col-12 text-right">
+        <button 
+        routerLink="addUser"
+        class="btn btn-info">Add User</button>
+        <hr>
+    </div>
+    <div class="col-md-4">
+        <div class="list-group">
+            <li
+            [routerLink]="[user.userId]"
+            [queryParams]="{userRole : user.userRole}"
+            *ngFor="let user of usersData"
+            class="list-group-item">
+                {{user.userName}}
+            </li>
+        </div>
+    </div>
+    <div class="col-md-8">
+
+    </div>
+</div>

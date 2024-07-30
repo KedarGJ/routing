@@ -1,0 +1,16 @@
+<p class="alert alert-info">
+   
+    
+    The User is <strong>
+    {{userObj.userName}} </strong> and its role is <strong> {{userObj.userRole}} </strong> 
+        
+   
+</p>
+
+<button
+(click)="gotoEditUser()"
+class="btn btn-info" >Edit User</button>
+
+<button
+(click)="onUserRemove()"
+class="btn btn-danger ml-3" >Remove User</button>

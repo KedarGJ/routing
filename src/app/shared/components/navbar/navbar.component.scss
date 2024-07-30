@@ -1,0 +1,10 @@
+
+
+
+.mainNavbar.navbar-light {
+ .navbar-nav .active>.nav-link,
+ .navbar-nav .nav-link.active,
+ .navbar-nav .nav-link.show,
+ .navbar-nav .show>.nav-link {
+        color: orange;
+}}

@@ -1,0 +1,35 @@
+<!-- <p>product-fom works!</p> -->
+<h3>
+    {{!isinEditMode ? 'Add Product' : 'Update product'}}
+</h3>
+
+<form [formGroup]="prodForm" (ngSubmit)="onProdAdd()">
+    <div class="form-group">
+        <label for="pname">Product Name</label>
+        <input type="text" class="form-control" id="pname" formControlName="pname">
+    </div>
+    <div class="form-group">
+        <label for="pstatus">Product Status</label>
+        <select type="text" class="form-control" id="pstatus" formControlName="pstatus">
+            <option value="Dispatched">Dispatched</option>
+            <option value="In-Progress">In-Progress</option>
+            <option value="Delivered">Delivered</option>
+
+        </select>
+    </div>
+        <div class="form-group">
+            <label for="canReturn">Can Return</label>
+            <select type="text" class="form-control" id="canReturn" formControlName="canReturn">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info btn-sm" *ngIf="!isinEditMode">Add Product</button>
+            <button
+            [disabled]="canEditParams === 0"
+            type="button" (click)="onProdUpdate()" class="btn btn-info btn-sm" *ngIf="isinEditMode">Update Product</button>
+        </div>
+    
+
+</form>
